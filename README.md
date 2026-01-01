@@ -74,7 +74,10 @@ npm install
 
 ### 2️⃣ Start Backend (Flask API)
 ```bash
-python app.py
+    pip install -r requirements.txt
+```
+```bash
+python backend.py
 ```
 
 ### 3️⃣ Start Frontend (React + Vite)
