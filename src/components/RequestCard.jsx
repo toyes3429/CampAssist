@@ -75,7 +75,7 @@ export default function RequestCard({ r, isRunner, onAccept, onComplete }) {
           {r.status === "OPEN" && (
             <button
               className="request-btn btn-accept"
-              onClick={() => onAccept(r.id)}
+              onClick={() => onAccept(r._id)}
             >
               Accept Request
             </button>
@@ -84,7 +84,7 @@ export default function RequestCard({ r, isRunner, onAccept, onComplete }) {
           {r.status === "ACCEPTED" && (
             <button
               className="request-btn btn-complete"
-              onClick={() => onComplete(r.id)}
+              onClick={() => onComplete(r._id)}
             >
               Mark Delivered
             </button>

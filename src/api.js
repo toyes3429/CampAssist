@@ -24,3 +24,8 @@ export const ignoreRequest = (id) => axios.patch(`${API}/requests/${id}/ignore`)
 export const completeRequest = (id) => axios.patch(`${API}/requests/${id}/complete`);
 export const getNotifications = (email) =>
   axios.get(`${API}/notifications/${email}`);
+const res = await getRunnerRequests();
+
+for (const r of res.data) {
+  console.log("Available requests 👉", r._id);
+}

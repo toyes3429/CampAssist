@@ -106,7 +106,6 @@ app.get("/api/requests/:email", async (req, res) => {
 // ACCEPT REQUEST
 app.patch("/api/requests/:id/accept", async (req, res) => {
     const { runner_email } = req.body;
-
     const request = await Request.findById(req.params.id);
     if (!request) return res.status(404).json({ message: "Not found" });
 
